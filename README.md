@@ -13,11 +13,11 @@ In this script, the agent starts with a Q-table initialised with zeros and learn
 where:
 - \(s) is the current state,
 - \(a) is the action taken,
-- is the reward obtained,
+- \(R) is the reward obtained,
 - \(s'\) is the next state,
 - \(a'\) is the possible actions of the next state,
-- \(\alpha) is the learning rate, and
-- \(\(\gamma) is the discount factor.
+- \(alpha) is the learning rate, and
+- \(gamma) is the discount factor.
 
 ## Code structure
 
@@ -37,8 +37,9 @@ where:
 
 4. **Visualisation**:
    - The environment is visualised with `env.render()` to observe the behaviour of the taxi after training.
+     ![](taxi_example.gif)
    - A graph is used to show the evolution of the rewards throughout the training.
-                                                ![](taxi_example.gif)
+     ![](reward_evolution.png)
 
 5. **Close the environment**:
    - The environment is closed with `env.close()` at the end of the script to free resources.
