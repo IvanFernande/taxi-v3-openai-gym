@@ -38,7 +38,7 @@ where:
 4. **Visualisation**:
    - The environment is visualised with `env.render()` to observe the behaviour of the taxi after training.
    - A graph is used to show the evolution of the rewards throughout the training.
-   - ![](taxi_example.gif)
+                                                ![](taxi_example.gif)
 
 5. **Close the environment**:
    - The environment is closed with `env.close()` at the end of the script to free resources.
