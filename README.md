@@ -8,7 +8,7 @@ Q-learning is a reinforcement learning method based on a table of values (Q-tabl
 
 In this script, the agent starts with a Q-table initialised with zeros and learns through interaction with the environment. During training, the agent receives rewards and adjusts the values in the Q table to reflect the best actions for each state, using the following update formula:
 
-\[Q(s, a) = Q(s, a) + \alpha \times (R + \gamma \max_{a'}) Q(s', a') - Q(s, a))}]
+Q(s, a) = Q(s, a) + alpha * {R + gamma * Q(s', max(a')) - Q(s, a)}
 
 where:
 - \(s) is the current state,
