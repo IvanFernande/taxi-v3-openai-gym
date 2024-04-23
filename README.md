@@ -48,6 +48,3 @@ where:
 2. Make sure you have the necessary requirements installed.
 3. Run the script to train the agent and visualise its behaviour in the "Taxi-v3" environment.
 4. Observe the reward graph and the simulation of the environment to evaluate the agent's performance.
-
-
-Translated with DeepL.com (free version)
