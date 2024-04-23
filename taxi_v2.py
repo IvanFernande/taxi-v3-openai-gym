@@ -5,25 +5,16 @@ import matplotlib.pyplot as plt
 import random
 import time
 
-print(gym.__version__)
-print(np.__version__)
-print(matplotlib.__version__)
-
-# Configuración del entorno
 env = gym.make("Taxi-v3")
 
-# Parámetros del modelo
 alpha = 0.4
 gamma = 0.9
 epsilon = 0.1
 
-# Inicializa la tabla Q
 q_table = np.zeros((env.observation_space.n, env.action_space.n))
 
-# Recolectar recompensas para el gráfico
 rewards = []
 
-# Entrenamiento de Q-learning
 episodes = 1000
 
 for episode in range(episodes):
@@ -53,11 +44,8 @@ for episode in range(episodes):
     rewards.append(total_reward)
 
 print("Entrenamiento completado.")
-
-# Simulación del taxi después del entrenamiento
 print("Simulación del taxi después del entrenamiento:")
 
-# Evaluación del agente
 test_episodes = 100
 success_count = 0
 
@@ -96,18 +84,16 @@ while not done and steps < 100:
     next_state = step_info[0] if isinstance(step_info, tuple) else step_info
     done = step_info[2]
     
-    env.render()  # Visualiza el entorno después de cada acción
-    time.sleep(0.5)  # Pausa para que el render sea visible
+    env.render()
+    time.sleep(0.5) 
     
     state = next_state
     steps += 1
 
-# Gráfico para visualizar recompensas
 plt.plot(range(episodes), rewards)
 plt.title("Evolución de Recompensas en Taxi-v3")
 plt.xlabel("Episodios")
 plt.ylabel("Recompensas Acumuladas")
 plt.show()
 
-# Cerrar el entorno
 env.close()
